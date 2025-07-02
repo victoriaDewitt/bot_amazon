@@ -1,5 +1,5 @@
 
-# 🤖 Bot de Disponibilidad de Productos TCG en Amazon
+# 🤖 Bot de Disponibilidad de Productos en Amazon
 
 Este proyecto es un bot escrito en Python que envía una alerta por correo electrónico cuando detecta disponibilidad de productos TCG (Trading Card Games) en Amazon México.  
 Es ideal para automatizar la vigilancia de productos en tiendas en línea y recibir notificaciones en tiempo real.
