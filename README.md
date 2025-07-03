@@ -1,89 +1,96 @@
+# 🤖 Amazon Product Availability Bot
 
-# 🤖 Bot de Disponibilidad de Productos en Amazon
+This project is a Python bot that sends an email alert when a product becomes available on Amazon Mexico.  
+It's ideal for automating product monitoring and receiving real-time notifications about restocks.
 
-Este proyecto es un bot escrito en Python que envía una alerta por correo electrónico cuando detecta disponibilidad de productos TCG (Trading Card Games) en Amazon México.  
-Es ideal para automatizar la vigilancia de productos en tiendas en línea y recibir notificaciones en tiempo real.
-
----
-
-## 🚀 Funcionalidades
-
-- Conexión segura a una cuenta de Gmail mediante autenticación de aplicación.
-- Envío de alertas por correo electrónico con contenido personalizado.
-- Uso de variables de entorno para proteger credenciales.
-- Estructura clara y adaptable para integrar un sistema de scraping.
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## 🚀 Features
+
+- Secure connection to a Gmail account using app authentication.
+- Email alerts with customizable content.
+- Environment variables for credential protection.
+- Clear and adaptable structure to integrate scraping logic.
+
+---
+
+## 🛠️ Technologies Used
 
 - Python 3.9+
-- `smtplib` y `email.mime` para envío de correos
-- `python-dotenv` para gestión de variables de entorno
+- `smtplib` and `email.mime` for email delivery
+- `python-dotenv` for environment variable management
 
 ---
 
-## 📦 Instalación
+## 📦 Installation
 
-1. **Clona este repositorio** en tu máquina local:
+1. **Clone this repository** to your local machine:
 
 ```bash
-git clone https://github.com/tu_usuario/bot-amazon-tcg.git
-cd bot-amazon-tcg
+git clone https://github.com/your_username/amazon-product-availability-bot.git
+cd amazon-product-availability-bot
+
 ```
 
-2. **Crea un entorno virtual (opcional, pero recomendado):**
+2. **Create a virtual environment (optional but recommended):**
 
 ```bash
 python -m venv venv
-venv\Scripts\activate  # En Windows
+venv\Scripts\activate  # On Windows
 ```
 
-3. **Instala las dependencias:**
+3. **Install the dependencies:**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:**
+4. **Create a `.env` file** in the root directory of the project with the following content:
+
 
 ```env
-EMAIL_USER=tu_correo@gmail.com
-EMAIL_PASS=tu_contraseña_de_aplicación
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_app_password
 ```
 
-⚠️ Para usar Gmail necesitas generar una **contraseña de aplicación** desde la configuración de seguridad de tu cuenta Google (necesitaras tener activada la verificación en dos pasos).
-
+⚠️ To use Gmail, you must generate an app password and have two-step verification enabled.
 ---
 
-## ▶️ Uso
+## ▶️ Usage
 
-Una vez configurado el `.env`, solo ejecuta:
+Once your `.env` file is properly configured, simply run:
+
+
 
 ```bash
 python monitor.py
 ```
 
-Si todo está correcto, verás un mensaje de éxito en la terminal y recibirás un correo en tu bandeja de entrada.
+If everything is correct, you'll see a success message in the terminal and receive an email in your inbox.
 
 ---
 
-## 🛡️ Seguridad
+## 🛡️ Security
 
-Este proyecto utiliza variables de entorno para proteger datos sensibles.  
-Asegúrate de que el archivo `.env` **no sea subido** al repositorio público. Ya está incluido en `.gitignore`.
-
----
-
-## 🧩 Ideas de mejora
-
-- Agregar scraping real a Amazon con `requests` o `selenium`.
-- Agregar más productos o categorías.
-- Enviar alertas a Telegram, Discord o WhatsApp.
-- Implementar interfaz web para configurar productos a monitorear.
+This project uses environment variables to keep sensitive data safe.
+Make sure your `.env` file **is not uploaded** to the public repository — it is already included in `.gitignore`.
 
 ---
 
-## 📄 Licencia
+## 🧩 Future Improvements
 
-Este proyecto está disponible bajo la licencia MIT. Puedes usarlo, modificarlo y adaptarlo libremente.
+- Add real scraping functionality using `requests` or `selenium`.
+- Support tracking multiple products or entire categories.
+- Send alerts via Telegram, Discord, or WhatsApp.
+- Create a web interface to manage monitored products.
+
+
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
+You are free to use, modify, and distribute it as you wish.
+

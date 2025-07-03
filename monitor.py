@@ -1,20 +1,20 @@
 # monitor.py
-# URL del producto a monitorear (personaliza esta línea con tu producto)
-product_url = "https://www.amazon.com.mx/dp/ID_DEL_PRODUCTO"
+# URL of the product to monitor (customize this line with your own product)
+product_url = "https://www.amazon.com.mx/dp/PRODUCT_ID"
 
 from dotenv import load_dotenv
 import os
 import smtplib
 from email.mime.text import MIMEText
 
-# Cargar variables de entorno desde .env
+# Load environment variables from .env
 load_dotenv()
 EMAIL_USER = os.getenv("EMAIL_USER")
 EMAIL_PASS = os.getenv("EMAIL_PASS")
 
-def enviar_correo():
-    subject = "📦 Alerta de disponibilidad de producto"
-    body = "Este es un correo automático generado por el bot de disponibilidad."
+def send_email():
+    subject = "📦 Product Availability Alert"
+    body = "This is an automated email sent by the availability bot."
 
     msg = MIMEText(body, 'plain', 'utf-8')
     msg['Subject'] = subject
@@ -26,8 +26,8 @@ def enviar_correo():
     server.login(EMAIL_USER, EMAIL_PASS)
     server.sendmail(msg['From'], msg['To'], msg.as_string())
     server.quit()
-    print("✅ Correo enviado correctamente.")
+    print("✅ Email sent successfully.")
 
-# Ejecutar
+# Run the bot
 if __name__ == "__main__":
-    enviar_correo()
+    send_email()
