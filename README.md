@@ -52,13 +52,13 @@ EMAIL_USER=tu_correo@gmail.com
 EMAIL_PASS=tu_contraseña_de_aplicación
 ```
 
-⚠️ Para usar Gmail necesitas generar una **contraseña de aplicación** desde la configuración de seguridad de tu cuenta Google (requiere tener activada la verificación en dos pasos).
+⚠️ Para usar Gmail necesitas generar una **contraseña de aplicación** desde la configuración de seguridad de tu cuenta Google (necesitaras tener activada la verificación en dos pasos).
 
 ---
 
 ## ▶️ Uso
 
-Una vez configurado el `.env`, simplemente ejecuta:
+Una vez configurado el `.env`, solo ejecuta:
 
 ```bash
 python monitor.py
